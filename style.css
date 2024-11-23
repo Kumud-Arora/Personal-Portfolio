@@ -64,5 +64,14 @@ nav ul li a:hover::after{
 .header-text h1{
     font-size: 60px;
     color: #FFFFFF;
-    margin: 10px 0; 
+    margin: 10px; 
 }
+.about-col-1 img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover; 
+}
+
+/*-----about-----*/
+
+
