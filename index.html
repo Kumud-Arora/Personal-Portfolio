@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width= , initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Portfolio - Kumud Arora</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -12,22 +12,20 @@
         <nav>
             <img src="Images/logo.png" class="logo">
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">Contact</a></li>
-
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
         <div class="header-text">
             <p>Computer Science Student</p>
-            <h1>Hi, I'm Kumud </h1>
+            <h1>Hi, I'm Kumud</h1>
         </div>
     </div>
 </div>
 
 <!-----about----->
-
 <div id="about">
     <div class="container">
         <div class="row">
@@ -41,25 +39,27 @@
                 </p>
 
                 <div class="tab-titles">
-                    <p class="tab-links active-link">Skills</p>
-                    <p class="tab-links">Experience</p>
-                    <p class="tab-links">Education</p>
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
                 </div>
-                <div class="tab-contents">
+                
+                <div class="tab-contents active-tab" id="skills">
                     <ul>
-                        <li><span>Programming Languages </span><br>C++, Java, Python, C, HTML, CSS, JavaScript</span></li>
+                        <li><span>Programming Languages</span><br>C++, Java, Python, C, HTML, CSS, JavaScript</li>
                         <li><span>Tools & Frameworks</span><br>GitHub, Figma, Pandas, NumPy, Matplotlib, Seaborn</li>
-                        <li><span>Interests </span><br>Web Development, Machine Learning, Product Management</span></li>
-                        <li><span>Currently Learning</span><br>Python for Machine Learning, React, API fundamentals</li>span?<li>
-
+                        <li><span>Interests</span><br>Web Development, Machine Learning, Product Management</li>
+                        <li><span>Currently Learning</span><br>Python for Machine Learning, React, API fundamentals</li>
                     </ul>
-                    </div>
+                </div>
+                
                 <div class="tab-contents" id="experience">
                     <ul>
                         <li><span>AI/ML Studio Fellow - Marsh McLennan</span><br>May 2025 – Present<br>Developing predictive models to quantify social inflation impact on claim costs and forecast industry trends using machine learning and regression analysis.</li>
                         <li><span>Management & Technical Program Analyst Intern - US GAO</span><br>Feb 2025 – April 2025<br>Performed quantitative analysis on fiscal health and tax policy using Python, built optimized reports for policymakers, and developed automation solutions to enhance government decision-making.</li>
                     </ul>
                 </div>
+                
                 <div class="tab-contents" id="education">
                     <ul>
                         <li><span>University of Texas at Dallas</span><br>Bachelor of Science in Computer Science<br>Minor in Business Administration<br>August 2023 – May 2027 | Richardson, TX</li>
@@ -68,35 +68,93 @@
                     </ul>
                 </div>
             </div>
-
         </div>
     </div>
 </div>
+
 <!-----portfolio----->
-
 <div id="portfolio">
-<div class="container">
-    <h1 class="sub-title" style="color: #2d3e1f;">My Projects</h1>
-    <div class="work-list">
-        <div class="work">
-            <img src="Images/githublogo.png" alt="UTD Marketplace">
-            <div class="layer">
-                <h3>The Market(place) at UTD</h3>
-                <p>Full-stack e-commerce platform for UT Dallas students with secure authentication, interactive listings, campus meet-up system, and scalable CRUD API backend.</p>
-                <a href="#">↗</a>
+    <div class="container">
+        <h1 class="sub-title" style="color: #2d3e1f;">My Projects</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="Images/githublogo.png" alt="UTD Marketplace">
+                <div class="layer">
+                    <h3>The Market(place) at UTD</h3>
+                    <p>Full-stack e-commerce platform for UT Dallas students with secure authentication, interactive listings, campus meet-up system, and scalable CRUD API backend.</p>
+                    <a href="#">↗</a>
+                </div>
             </div>
-        </div>
-        <div class="work">
-            <img src="Images/githublogo.png" alt="Car Analyst">
-            <div class="layer">
-                <h3>Car-Analyst</h3>
-                <p>Data analysis project processing 50,000+ rows of eBay car sales data using Python, Pandas, and NumPy with interactive visualizations in Matplotlib and Seaborn.</p>
-                <a href="#">↗</a>
+            <div class="work">
+                <img src="Images/githublogo.png" alt="Car Analyst">
+                <div class="layer">
+                    <h3>Car-Analyst</h3>
+                    <p>Data analysis project processing 50,000+ rows of eBay car sales data using Python, Pandas, and NumPy with interactive visualizations in Matplotlib and Seaborn.</p>
+                    <a href="#">↗</a>
+                </div>
             </div>
         </div>
     </div>
 </div>
+
+<!-----contact----->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p>✉️ kumudarora11@gmail.com</p>
+                <p>📱 720-727-5987</p>
+                <div class="social-icons">
+                    <a href="https://linkedin.com/in/kumud-arora" target="_blank">LinkedIn</a>
+                    <a href="https://github.com/Kumud-Arora" target="_blank">GitHub</a>
+                </div>
+                <a href="#" class="btn" download>Download Resume</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message" required></textarea>
+                    <button type="submit" class="btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
 </div>
 
+<script>
+function opentab(tabname) 
+{
+    const tablinks = document.getElementsByClassName("tab-links");
+    const tabcontents = document.getElementsByClassName("tab-contents");
+    
+    for(let tablink of tablinks)
+    {
+        tablink.classList.remove("active-link");
+    }
+    
+    for(let tabcontent of tabcontents) 
+    {
+        tabcontent.classList.remove("active-tab");
+    }
+    
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+}
+
+const form = document.forms['submit-to-google-sheet'];
+const msg = document.getElementById("msg");
+
+form.addEventListener('submit', e => {
+    e.preventDefault();
+    msg.innerHTML = "Thank you! Your message has been sent successfully.";
+    setTimeout(function(){
+        msg.innerHTML = "";
+    }, 5000);
+    form.reset();
+});
+</script>
 </body>
 </html>
